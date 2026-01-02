@@ -2,9 +2,12 @@
 #include <ftxui/screen/color.hpp>
 
 int main() {
-    auto screen = ftxui::Screen::Create(
-        ftxui::Dimension::Full(),   // Use full terminal width
-        ftxui::Dimension::Fixed(10) // Fixed height of 10 rows
+
+    using namespace ftxui;
+
+    auto screen = Screen::Create(
+        Dimension::Full(),   // Use full terminal width
+        Dimension::Fixed(10) // Fixed height of 10 rows
     );
 
     // Access a specific pixel at (10, 5)
@@ -12,8 +15,8 @@ int main() {
 
     // Set properties of the pixel.
     pixel.character = U'X';
-    pixel.foreground_color = ftxui::Color::Red;
-    pixel.background_color = ftxui::Color::RGB(0, 255, 0);
+    pixel.foreground_color = Color::Red;
+    pixel.background_color = Color::RGB(0, 255, 0);
     pixel.bold = true; // Set bold style
     screen.Print(); // Print the screen to the terminal
 }
