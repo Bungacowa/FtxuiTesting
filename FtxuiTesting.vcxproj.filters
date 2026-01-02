@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FtxuiScreenTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="FtxuiTesting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
